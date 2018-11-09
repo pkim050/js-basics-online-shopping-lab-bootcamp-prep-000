@@ -64,17 +64,10 @@ function removeFromCart(item) {
   var counter = 0;
   for (var k = 0; k < cart.length; k++) {
     if (cart[k].itemName === item) {
-      var temp3 = cart[k].itemName;
-      counter++;
+      cart[k].splice(k, 1);
     }
   }
-  if (counter !== 0) {
-    delete cart[temp3];
-    return cart;
-  }
-  else {
-    return "That item is not in your cart.";
-  }
+  return "That item is not in your cart.";
 }
 
 function placeOrder(cardNumber) {

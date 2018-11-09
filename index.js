@@ -68,12 +68,6 @@ function removeFromCart(item) {
       delete cart[k].itemName;
       counter++;
     }
-    if (counter === 0) {
-      return "That item is not in your cart.";
-    }
-    else {
-      return cart;
-    }
   }
 }
 

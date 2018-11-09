@@ -63,18 +63,10 @@ function removeFromCart(item) {
   // write your code here
   var temp2 = "";
   var counter = 0;
-  console.log(item);
-  console.log(cart[0].itemName);
-  if (cart.length === 0) {
-    return cart;
-  }
-  else {
-    for (var k = 0; k < cart.length; k++) {
-      if (cart[k].itemName === item) {
-        temp2 = cart[k].itemName;
-        delete cart.temp2;
-        counter++;
-      }
+  for (var k = 0; k < cart.length; k++) {
+    if (cart[k].itemName === item) {
+      delete cart[k].itemName;
+      counter++;
     }
     if (counter === 0) {
       return "That item is not in your cart.";

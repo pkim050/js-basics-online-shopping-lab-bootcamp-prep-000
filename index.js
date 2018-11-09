@@ -63,7 +63,8 @@ function removeFromCart(item) {
   // write your code here
   var temp2 = "";
   var counter = 0;
-  
+  console.log(item);
+  console.log(cart[0].itemName);
   if (cart.length === 0) {
     return cart;
   }
